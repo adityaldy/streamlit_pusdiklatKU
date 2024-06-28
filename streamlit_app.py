@@ -45,7 +45,7 @@ import streamlit as st
 
 def main() : 
   st.header('This is Halaman Streamlit Aldy')
-  st.subheader('This is subheader')
+  st.subheader('Setjen LPDP')
   st.markdown('# rendering markdown')
   st.write('Some phytagorean equation : ')
   st.latex('c^2 = a^2+b^2')
