@@ -49,10 +49,10 @@ from st_aggrid import AgGrid, GridOptionsBuilder
 house = pd.read_csv('https://raw.githubusercontent.com/adityaldy/streamlit_pusdiklatKU/main/house_clean.csv')
 
 gb = GridOptionsBuilder.from_dataframe(house)
-gb.configure_pagination(paginationAutoPageSize=True)
+gb.configure_pagination(paginationAutoPageSize=False, paginationPageSize=10)
 gb.configure_default_column(editable=True, groupable=True, filter=True, sortable=True)
 gb.configure_side_bar()
-gb.configure_grid_options(domLayout='normal')
+gb.configure_grid_options(domLayout='normal', autoSizeColumns=True)
 grid_options = gb.build()
 
 def main() : 
