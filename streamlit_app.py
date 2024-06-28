@@ -57,7 +57,7 @@ def main() :
   st.write('Metrics')
   st.metric(label="Temperature", value="70 F", delta="-1.2 F")
   st.dataframe(house)
-  AgGrid(house)
+  # AgGrid(house)
 
 if __name__ == '__main__' : 
   main()
