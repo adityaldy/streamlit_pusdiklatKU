@@ -60,6 +60,7 @@ def main() :
   st.dataframe(house)
   st.markdown('# Aggrid')
   AgGrid(house)
+  st.table([x for x in range(1,5)])
 
 if __name__ == '__main__' : 
   main()
