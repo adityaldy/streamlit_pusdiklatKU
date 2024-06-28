@@ -44,7 +44,7 @@ st.altair_chart(alt.Chart(df, height=700, width=700)
 import streamlit as st 
 import pandas as pd 
 import requests
-# from st_aggrid import AgGrid
+from st_aggrid import AgGrid
 
 house = pd.read_csv('https://raw.githubusercontent.com/adityaldy/streamlit_pusdiklatKU/main/house_clean.csv')
 
@@ -57,6 +57,7 @@ def main() :
   st.write('Metrics')
   st.metric(label="Temperature", value="70 F", delta="-1.2 F")
   st.dataframe(house)
+  AgGrid(house)
 
 if __name__ == '__main__' : 
   main()
