@@ -44,7 +44,7 @@ st.altair_chart(alt.Chart(df, height=700, width=700)
 import streamlit as st 
 
 def main() : 
-  st.header('This is header')
+  st.header('This is Halaman Streamlit Aldy')
   st.subheader('This is subheader')
   st.markdown('# rendering markdown')
   st.write('Some phytagorean equation : ')
