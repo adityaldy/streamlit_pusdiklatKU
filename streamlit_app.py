@@ -44,7 +44,11 @@ st.altair_chart(alt.Chart(df, height=700, width=700)
 import streamlit as st 
 
 def main() : 
-  st.write('Minimal Example')
+  st.header('This is header')
+  st.subheader('This is subheader')
+  st.markdown('# rendering markdown')
+  st.write('Some phytagorean equation : ')
+  st.latex('c^2 = a^2+b^2')
 
 if __name__ == '__main__' : 
   main()
