@@ -54,6 +54,8 @@ def main() :
   st.markdown('# rendering markdown')
   st.write('Some phytagorean equation : ')
   st.latex('c^2 = a^2+b^2')
+  st.write('Metrics')
+  st.metric(label="Temperature", value="70 F", delta="-1.2 F")
   st.dataframe(house)
 
 if __name__ == '__main__' : 
