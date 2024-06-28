@@ -56,8 +56,10 @@ def main() :
   st.latex('c^2 = a^2+b^2')
   st.write('Metrics')
   st.metric(label="Temperature", value="70 F", delta="-1.2 F")
+  st.markdown('# dataframe biasa')
   st.dataframe(house)
-  # AgGrid(house)
+  st.markdown('# Aggrid')
+  AgGrid(house)
 
 if __name__ == '__main__' : 
   main()
