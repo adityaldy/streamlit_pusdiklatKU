@@ -42,6 +42,11 @@ st.altair_chart(alt.Chart(df, height=700, width=700)
 """
 
 import streamlit as st 
+import pandas as pd 
+import requests
+from st_aggrid import AgGrid
+
+house = pd.read_csv('https://raw.githubusercontent.com/adityaldy/streamlit_pusdiklatKU/main/house_clean.csv')
 
 def main() : 
   st.header('This is Halaman Streamlit Aldy')
@@ -49,6 +54,7 @@ def main() :
   st.markdown('# rendering markdown')
   st.write('Some phytagorean equation : ')
   st.latex('c^2 = a^2+b^2')
+  st.dataframe(house)
 
 if __name__ == '__main__' : 
   main()
