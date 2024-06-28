@@ -116,7 +116,7 @@ def main() :
   with st.form("Data Diri"):
       st.write("Inside the form")
       slider_val = st.slider("Form slider")
-      checkbox_val = st.checkbox("Form checkbox")
+      checkbox_val = st.checkbox("Form di checkbox")
 
       # Every form must have a submit button.
       submitted = st.form_submit_button("Submit")
