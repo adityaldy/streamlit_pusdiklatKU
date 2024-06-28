@@ -44,9 +44,16 @@ st.altair_chart(alt.Chart(df, height=700, width=700)
 import streamlit as st 
 import pandas as pd 
 import requests
-from st_aggrid import AgGrid
+from st_aggrid import AgGrid, GridOptionsBuilder
 
 house = pd.read_csv('https://raw.githubusercontent.com/adityaldy/streamlit_pusdiklatKU/main/house_clean.csv')
+
+gb = GridOptionsBuilder.from_dataframe(house)
+gb.configure_pagination(paginationAutoPageSize=True)
+gb.configure_default_column(editable=True, groupable=True, filter=True, sortable=True)
+gb.configure_side_bar()
+gb.configure_grid_options(domLayout='normal')
+grid_options = gb.build()
 
 def main() : 
   st.header('This is Halaman Streamlit Aldy')
@@ -58,8 +65,8 @@ def main() :
   st.metric(label="Temperature", value="70 F", delta="-1.2 F")
   st.markdown('# dataframe biasa')
   st.dataframe(house)
-  #st.markdown('# Aggrid')
-  #AgGrid(house)
+  st.markdown('# Aggrid')
+  AgGrid(house, gridOptions=grid_options, enable_enterprise_modules=True, theme='streamlit')
   #st.table([x for x in range(1,5)])
 
   click_me_btn = st.button('Click Me')
