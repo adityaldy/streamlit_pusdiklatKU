@@ -44,7 +44,7 @@ st.altair_chart(alt.Chart(df, height=700, width=700)
 import streamlit as st 
 import pandas as pd 
 import requests
-from st_aggrid import AgGrid
+# from st_aggrid import AgGrid
 
 house = pd.read_csv('https://raw.githubusercontent.com/adityaldy/streamlit_pusdiklatKU/main/house_clean.csv')
 
